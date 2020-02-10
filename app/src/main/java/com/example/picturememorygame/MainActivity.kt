@@ -1,7 +1,7 @@
 package com.example.picturememorygame
 
-import android.content.Intent
 import android.graphics.Color
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -10,7 +10,6 @@ import androidx.databinding.DataBindingUtil
 import com.example.picturememorygame.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import kotlin.random.Random
 import kotlin.concurrent.schedule
 
 
@@ -42,21 +41,48 @@ class MainActivity : AppCompatActivity() {
             pic16
         )
 
-        for (item in viewss) item.setOnClickListener { item.setBackggroundColor(hey.get(item)!!) }
 
+        var objs: Stack<Pair<View, Int>> = Stack()
+        for (item in viewss) item.setOnClickListener {
+            var gg: Pair<View, Int> = item to hey.getValue(item)
+            objs.push(gg)
+            item.setBackgroundResource(hey.getValue(item))
+            Timer("setting", false).schedule(500) { }
+            if (objs.size == 2) {
+                var obj1 = objs.pop()
+                var obj2 = objs.pop()
+
+                if (obj1.second == obj2.second) {
+                    Toast.makeText(this, "Good Job", Toast.LENGTH_SHORT).show()
+                    obj1.first.isEnabled = false
+                    obj1.first.background.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY)
+                    obj2.first.isEnabled = false
+                    obj2.first.background.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY)
+                } else {
+                    Timer("setting", false).schedule(500) {
+
+                        obj1.first.setBackgroundResource(R.color.myColor)
+                        obj2.first.setBackgroundResource(R.color.myColor)
+                    }
+
+                }
+
+
+            }
+        }
+
+        
 
         binding.button.setOnClickListener {
             randomize(viewss)
-
+            for(items in viewss){
+                items.isEnabled=true
+            }
             Timer(
                 "setting up",
                 false
             ).schedule(2000) {
                 for (item in viewss) item.setBackgroundResource(R.color.myColor)
-//                Toast.makeText(applicationContext,
-//                    "Now that you have seen the colors start guessing the colored pairs by clicking on the boxes above",
-//                    Toast.LENGTH_LONG
-//                ).show()
             }
         }
     }
@@ -69,7 +95,7 @@ class MainActivity : AppCompatActivity() {
             R.color.colorAccent,
             R.color.yellow,
             R.color.red,
-            R.color.myColor,
+            R.color.random,
             R.color.colorPrimaryDark,
             R.color.colorPrimary
         )
@@ -81,16 +107,9 @@ class MainActivity : AppCompatActivity() {
         Collections.shuffle(list)
         var i = 0
         for (items in list) {
+            hey.put(items, colors[i])
             items.setBackgroundResource(colors[i++])
-            hey.plus(items to colors)
+
         }
-
-
     }
-
-//    fun work(view: View) {
-//
-//
-//    }
-
 }

@@ -8,7 +8,7 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="81dp">
 
-    <TextView
+    <Button
         android:id="@+id/pic16"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -22,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/pic15" />
 
-    <TextView
+    <Button
         android:id="@+id/pic14"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -34,7 +34,7 @@
         app:layout_constraintStart_toEndOf="@+id/pic13"
         app:layout_constraintTop_toBottomOf="@+id/pic10" />
 
-    <TextView
+    <Button
         android:id="@+id/pic1"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -48,7 +48,7 @@
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/pic4"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -60,7 +60,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/pic3" />
 
-    <TextView
+    <Button
         android:id="@+id/pic3"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -73,7 +73,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/pic2" />
 
-    <TextView
+    <Button
         android:id="@+id/pic2"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -87,7 +87,7 @@
         app:layout_constraintStart_toEndOf="@+id/pic1"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/pic9"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -100,7 +100,7 @@
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/pic12"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -112,7 +112,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/pic11" />
 
-    <TextView
+    <Button
         android:id="@+id/pic5"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -125,7 +125,7 @@
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/pic6"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -138,7 +138,7 @@
         app:layout_constraintStart_toEndOf="@+id/pic5"
         app:layout_constraintTop_toBottomOf="@+id/pic2" />
 
-    <TextView
+    <Button
         android:id="@+id/pic7"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -151,7 +151,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/pic6" />
 
-    <TextView
+    <Button
         android:id="@+id/pic8"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -163,7 +163,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/pic7" />
 
-    <TextView
+    <Button
         android:id="@+id/pic10"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -176,7 +176,7 @@
         app:layout_constraintStart_toEndOf="@+id/pic9"
         app:layout_constraintTop_toBottomOf="@+id/pic6" />
 
-    <TextView
+    <Button
         android:id="@+id/pic11"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -189,7 +189,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/pic10" />
 
-    <TextView
+    <Button
         android:id="@+id/pic13"
         style="@style/myStyle"
         android:layout_width="0dp"
@@ -202,7 +202,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/pic15"
         style="@style/myStyle"
         android:layout_width="0dp"
